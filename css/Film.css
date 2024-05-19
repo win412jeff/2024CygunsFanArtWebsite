@@ -1,0 +1,383 @@
+@charset "UTF-8";  /*n 一定要加 */
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Open+Sans&display=swap');
+/* ---------基本設定--------- */
+body{
+    font-family: Arial,'Open Sans', Helvetica,'Noto Sans TC','黑體-繁','Heiti TC','微軟正黑體','Microsoft JhengHei',sans-serif;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+body{
+    background-image: url(../images/bkg03.png);
+    -webkit-font-smoothing: antialiased;   
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+/* ---------開幕--------- */
+.overlay {
+    
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    z-index: 800;
+    background-image: url(../images/opening.png);
+    /*background: linear-gradient(90deg,#c7ab78 50%, #c02045 50%);*/
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------頁首區--------- */
+header{
+    z-index: 9999;
+    display: block;
+    position: relative;
+}
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;   
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to top, rgba(51,51,102, 0) 0%, rgb(51,51,102) 125%);	
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+.btn-1-2{
+    display: block;
+    text-align: center;
+}
+header .menu{
+    display: flex;
+    flex-basis: 45%;
+    margin: 1% 1% ;
+    margin-top: 10PX;   
+}
+header .menu li{
+    flex: 1;
+}
+header .menu a{
+    border-left: solid 2px #ffffff;
+    font-size: 1.3vw;
+    color: #ffffff;
+    text-decoration: none;
+} 
+header .menu li:first-child a{
+    border-left: none;
+} 
+header .menu a:hover{
+    background-color: rgb(211, 26, 26);
+    color: rgb(255, 255, 255);
+}
+header div{
+    height: 4%;
+    width: 4%;
+}
+/* ---------封面區--------- */
+#banner{
+    z-index: 700;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: column; /* 設定成垂直排列 */
+    justify-content: center; /* 在垂直方向置中 */
+    align-items: center; /* 在水平方向置中 */
+    height: 100vh;
+    overflow: hidden;
+}
+.backgr{
+    position: absolute;
+    width: 100%;
+}
+.hby {
+    z-index: 905;
+    position: absolute;
+    bottom: 0.1%;
+    left: 1%;
+    width: 100%;
+}
+.cyg{
+    z-index: 900;
+    position: relative; 
+    width: 100%;   
+}
+.balloon_back{
+    z-index: 80;
+    position: absolute;
+    width: 100%;
+}
+.balloon_front{
+    z-index: 902;
+    position: absolute;
+    width: 100%;
+}
+.flower{
+    z-index: 902;
+    position: absolute;
+    width: 100%;
+}
+.pigeon{
+    z-index: 902;
+    position: absolute;
+    width: 100%;
+}
+.cygstudio {
+    z-index: 903;
+    position: absolute;
+    width: 20%;
+    bottom: 2%;
+    right: 1%;
+    text-align:right;
+}
+.cygstudio h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+.cygstudio h1::before {
+    content: attr(data-storke);
+}
+.cygstudio h1::before {
+    position: absolute;
+    z-index: -1;
+    -webkit-text-stroke: 10px #3B3355;
+}
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: #6666CC;
+    margin: 10px 0px 0px 0px;
+}
+.cygstudio h7{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.cygstudio h7::before {
+    content: attr(data-storke);
+}
+.cygstudio h7::before {
+    position: absolute;
+    z-index: -1;
+    -webkit-text-stroke: 8px #3B3355;
+}
+
+
+/* ---------影片區--------- */
+
+:root {
+    --primary:  #293845;
+    --white: #293845;
+    --bg:  #ffffff;
+  }
+
+  .container {
+    max-width: 124rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #293845;
+    padding: 2rem 0;
+    text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff;
+  }
+  
+#tranding {
+    padding: 4rem 0;
+  }
+  
+  @media (max-width:1440px) {
+    #tranding {
+      padding: 3rem 0;
+    }
+  }
+  
+  #tranding .tranding-slider {
+    height: 36rem;
+    padding: 2rem 0;
+    position: relative;
+  }
+  
+  @media (max-width:500px) {
+    #tranding .tranding-slider {
+      height: 25rem;
+    }
+  }
+  
+  .tranding-slide {
+    width: 37rem;
+    height: 36rem;
+    position: relative;
+  }
+  
+  @media (max-width:500px) {
+    .tranding-slide {
+      width: 28rem !important;
+      height: 17rem !important;
+    }
+    .tranding-slide .tranding-slide-img img {
+      width: 28rem !important;
+      height: 17rem !important;
+    }
+  }
+ 
+  .tranding-slide .tranding-slide-img img {
+     /* 調整圖片大小 */
+    width: 37rem;
+    height: 27rem;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+  
+  .tranding-slide .tranding-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  } 
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    display: none;
+  }
+  
+  .tranding-slider-control {
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tranding-slider-control .swiper-button-next {
+    left: 58% !important;
+    transform: translateX(-58%) !important;
+  }
+  
+  @media (max-width:990px) {
+    .tranding-slider-control .swiper-button-next {
+      left: 70% !important;
+      transform: translateX(-70%) !important;
+    }
+  }
+  
+  @media (max-width:450px) {
+    .tranding-slider-control .swiper-button-next {
+      left: 80% !important;
+      transform: translateX(-80%) !important;
+    }
+  }
+  
+  @media (max-width:990px) {
+    .tranding-slider-control .swiper-button-prev {
+      left: 30% !important;
+      transform: translateX(-30%) !important;
+    }
+  }
+  
+  @media (max-width:450px) {
+    .tranding-slider-control .swiper-button-prev {
+      left: 20% !important;
+      transform: translateX(-20%) !important;
+    }
+  }
+  
+  .tranding-slider-control .slider-arrow {
+    background: var(--white);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    left: 42%;
+    transform: translateX(-42%);
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  }
+  
+  .tranding-slider-control .slider-arrow ion-icon {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .tranding-slider-control .slider-arrow::after {
+    content: '';
+  }
+  /*調整點點位置*/
+  .tranding-slider-control .swiper-pagination {
+    position: relative;
+    width: 15rem;
+    bottom: 0rem;
+  }
+  
+  .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+    filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  }
+  
+  .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+    background: var(--primary);
+  }
+
+
+  
+/* ---------footer--------- */
+
+footer{
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 在垂直方向置中 */
+  align-items: center; /* 在水平方向置中 */
+  text-align: center;
+  width: 100%;
+  height: 4vh;
+  background-color: #BBFBD0;;
+}
+footer p{
+  font-size: 2vh;
+}
+#gotop{
+  display: none;
+  width: 10rem;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 3rem;
+  right: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
